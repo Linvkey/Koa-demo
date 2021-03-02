@@ -1,19 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <img alt="Vue logo" src="./assets/logo.png" />
+    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <com :age="age" @btn="msg" /> -->
+
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from "./components/HelloWorld.vue";
+// import com from "./components/com";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    // HelloWorld,
+    // com,
+  },
+  data() {
+    return {
+      age: 20,
+    };
+  },
+  methods: {
+    // msg() {
+    //   this.age++;
+    // },
+  },
+};
 </script>
 
 <style>
